@@ -1,0 +1,30 @@
+<!-- POST data  -->
+<!-- data from the 
+<form> <input> tags is processed using server-side code. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MyTV</title>
+    <!-- local css file in public directory -->
+    <!-- the href path is point up a level. Why is this? Well this form is going to be placed in a root called admin/add.-->
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Add</h1>
+      <p>Add TV show.</p>
+    </header>
+
+    <main>
+      <div>
+        <form action="/admin/add" method="POST">
+          <p><input name="showField" /></p>
+          <p><input name="imgField" /></p>
+          <p><textarea name="desField"></textarea></p>
+          <input type="submit" value="Add Show" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

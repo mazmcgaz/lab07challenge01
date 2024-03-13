@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MyTV</title>
+    <!-- local css file in public directory -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+      <p>Web app is built using node, express and mysql to show MY TV shows.</p>
+    </header>
+    <main>
+      <%# you cannot control or terminate the loop, or make it skip an iteration
+      %> <% rowdata.forEach((tvshow)=> { %> <%# To display the values we target
+      the property name, as the object item is held in a local variable valled
+      tv show %>
+      <p>
+        <%= tvshow.showname %>
+
+        <span>
+          <a href="/row?tvid=<%=tvshow.id%>">details</a>
+        </span>
+      </p>
+
+      <% }) %>
+    </main>
+  </body>
+</html>
